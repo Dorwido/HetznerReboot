@@ -92,7 +92,7 @@ class AliveChecker {
     }
 
     function __destruct(){
-        if($this->serverfails>0 and $this->serverfails>=$this->fails and (time()-$this->serverlastreboot<$this->rebootwaittime)){
+        if($this->serverfails>0 and $this->serverfails>=$this->fails and (time()-$this->serverlastreboot>$this->nextrebootwaittime)){
             $this->do_reboot();
             $this->serverfails = 0;
             $this->serverlastreboot = time();
