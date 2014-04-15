@@ -85,7 +85,7 @@ class AliveChecker {
     }
 
     private function do_reboot(){
-        require 'classes/RobotClient.class.php';
+
 
         $robot = new RobotClient($this->roboturl,$this->robotlogin,$this->robotpassword);
         $robot->resetExecute($this->serverip,$this->reboottype);

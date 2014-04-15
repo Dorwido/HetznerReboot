@@ -6,7 +6,7 @@
  * Time: 17:12
  */
 
-require_once('classes/AliveChecker.class.php');
+
 require_once('config.php');
 $GLOBALS['filepath'] = dirname(__FILE__)."/serverstatus/";
 for ($i=0;$i<count($config['servers']);$i++){
